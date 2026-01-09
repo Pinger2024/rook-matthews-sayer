@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Our Services | Rook Matthews Sayer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #1a365d;
+            --color-accent: #c53030;
+            --color-bg: #ffffff;
+            --color-bg-alt: #f7fafc;
+            --color-text: #2d3748;
+            --color-text-muted: #718096;
+            --color-border: #e2e8f0;
+            --font-display: 'DM Serif Display', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, sans-serif;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --radius: 8px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); color: var(--color-text); line-height: 1.6; background: var(--color-bg); }
+        .concept-banner { background: var(--color-accent); color: white; text-align: center; padding: 10px 20px; font-size: 13px; font-weight: 500; }
+        nav { background: var(--color-primary); padding: 0 40px; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .logo { font-family: var(--font-display); font-size: 1.5rem; color: white; text-decoration: none; }
+        .nav-links { display: flex; gap: 32px; list-style: none; }
+        .nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 500; font-size: 15px; }
+        .nav-cta { background: var(--color-accent); color: white; padding: 10px 20px; border-radius: var(--radius); text-decoration: none; font-weight: 600; font-size: 14px; }
+        .page-header { background: var(--color-primary); padding: 60px 40px; text-align: center; }
+        .page-header h1 { font-family: var(--font-display); font-size: 3rem; color: white; margin-bottom: 16px; }
+        .page-header p { color: rgba(255,255,255,0.8); font-size: 1.2rem; max-width: 600px; margin: 0 auto; }
+        .services-section { max-width: 1000px; margin: 0 auto; padding: 60px 40px; }
+        .service-block { margin-bottom: 60px; padding-bottom: 60px; border-bottom: 1px solid var(--color-border); }
+        .service-block:last-child { border-bottom: none; }
+        .service-block h2 { font-family: var(--font-display); font-size: 2rem; color: var(--color-primary); margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+        .service-block h2 span { font-size: 2rem; }
+        .service-block p { color: var(--color-text-muted); font-size: 1.1rem; margin-bottom: 20px; }
+        .service-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }
+        .feature { display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: var(--color-bg-alt); border-radius: var(--radius); }
+        .feature-check { color: var(--color-accent); font-weight: bold; }
+        .cta-box { background: var(--color-primary); color: white; padding: 40px; border-radius: var(--radius); text-align: center; margin-top: 40px; }
+        .cta-box h3 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 16px; }
+        .cta-box p { opacity: 0.9; margin-bottom: 24px; }
+        .cta-box a { display: inline-block; background: var(--color-accent); color: white; padding: 14px 32px; border-radius: var(--radius); text-decoration: none; font-weight: 600; }
+        footer { background: var(--color-primary); color: rgba(255,255,255,0.8); padding: 40px; text-align: center; font-size: 14px; }
+        @media (max-width: 768px) { .nav-links { display: none; } .service-features { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="concept-banner">DESIGN CONCEPT ONLY — This is an unofficial mockup created for demonstration purposes. Not affiliated with Rook Matthews Sayer.</div>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Rook Matthews Sayer</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta">Book Valuation</a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Our Services</h1>
+        <p>Everything you need to buy, sell, let, or manage property in the North East.</p>
+    </div>
+
+    <div class="services-section">
+        <div class="service-block">
+            <h2><span>🏠</span> Residential Sales</h2>
+            <p>We sell more homes than any other estate agent in the region. Our extensive marketing package, local expertise, and dedicated team ensure your property reaches the right buyers and achieves the best possible price.</p>
+            <div class="service-features">
+                <div class="feature"><span class="feature-check">✓</span> Free, no-obligation valuation</div>
+                <div class="feature"><span class="feature-check">✓</span> Professional photography</div>
+                <div class="feature"><span class="feature-check">✓</span> Rightmove, Zoopla & OnTheMarket</div>
+                <div class="feature"><span class="feature-check">✓</span> Accompanied viewings</div>
+                <div class="feature"><span class="feature-check">✓</span> Regular progress updates</div>
+                <div class="feature"><span class="feature-check">✓</span> Sales progression support</div>
+            </div>
+        </div>
+
+        <div class="service-block">
+            <h2><span>🔑</span> Lettings & Property Management</h2>
+            <p>Whether you're a landlord looking for quality tenants or a tenant searching for your next home, our lettings team provides a professional, reliable service backed by decades of experience.</p>
+            <div class="service-features">
+                <div class="feature"><span class="feature-check">✓</span> Tenant finding service</div>
+                <div class="feature"><span class="feature-check">✓</span> Full management packages</div>
+                <div class="feature"><span class="feature-check">✓</span> Rent collection & accounting</div>
+                <div class="feature"><span class="feature-check">✓</span> Property inspections</div>
+                <div class="feature"><span class="feature-check">✓</span> Maintenance coordination</div>
+                <div class="feature"><span class="feature-check">✓</span> Legal compliance support</div>
+            </div>
+        </div>
+
+        <div class="service-block">
+            <h2><span>🏢</span> Commercial Property</h2>
+            <p>Our commercial team handles sales and lettings of offices, retail units, industrial premises, and land across the North East. Expert advice for businesses and investors alike.</p>
+            <div class="service-features">
+                <div class="feature"><span class="feature-check">✓</span> Commercial sales & lettings</div>
+                <div class="feature"><span class="feature-check">✓</span> Business sales</div>
+                <div class="feature"><span class="feature-check">✓</span> Investment advice</div>
+                <div class="feature"><span class="feature-check">✓</span> Development consultancy</div>
+            </div>
+        </div>
+
+        <div class="service-block">
+            <h2><span>🔨</span> Auctions</h2>
+            <p>Our regular auction events offer a fast, transparent way to buy or sell property. Ideal for investors, developers, and anyone wanting certainty on completion.</p>
+            <div class="service-features">
+                <div class="feature"><span class="feature-check">✓</span> Regular auction events</div>
+                <div class="feature"><span class="feature-check">✓</span> Online bidding available</div>
+                <div class="feature"><span class="feature-check">✓</span> 28-day completion</div>
+                <div class="feature"><span class="feature-check">✓</span> Guide price transparency</div>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h3>Ready to Get Started?</h3>
+            <p>Book a free, no-obligation valuation with one of our local experts.</p>
+            <a href="contact.html">Book Valuation</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Rook Matthews Sayer. All rights reserved. | <a href="contact.html" style="color: white;">Contact Us</a></p>
+    </footer>
+</body>
+</html>

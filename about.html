@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>About Us | Rook Matthews Sayer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #1a365d;
+            --color-primary-light: #2c5282;
+            --color-accent: #c53030;
+            --color-accent-light: #e53e3e;
+            --color-bg: #ffffff;
+            --color-bg-alt: #f7fafc;
+            --color-text: #2d3748;
+            --color-text-muted: #718096;
+            --color-border: #e2e8f0;
+            --font-display: 'DM Serif Display', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, sans-serif;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --radius: 8px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); color: var(--color-text); line-height: 1.6; background: var(--color-bg); }
+        .concept-banner { background: var(--color-accent); color: white; text-align: center; padding: 10px 20px; font-size: 13px; font-weight: 500; }
+        nav { background: var(--color-primary); padding: 0 40px; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .logo { font-family: var(--font-display); font-size: 1.5rem; color: white; text-decoration: none; }
+        .nav-links { display: flex; gap: 32px; list-style: none; }
+        .nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 500; font-size: 15px; }
+        .nav-cta { background: var(--color-accent); color: white; padding: 10px 20px; border-radius: var(--radius); text-decoration: none; font-weight: 600; font-size: 14px; }
+        .page-header { background: var(--color-primary); padding: 60px 40px; text-align: center; }
+        .page-header h1 { font-family: var(--font-display); font-size: 3rem; color: white; margin-bottom: 16px; }
+        .page-header p { color: rgba(255,255,255,0.8); font-size: 1.2rem; max-width: 600px; margin: 0 auto; }
+        .content { max-width: 900px; margin: 0 auto; padding: 60px 40px; }
+        .content h2 { font-family: var(--font-display); font-size: 2rem; color: var(--color-primary); margin: 40px 0 20px; }
+        .content h2:first-child { margin-top: 0; }
+        .content p { margin-bottom: 20px; color: var(--color-text-muted); font-size: 1.1rem; }
+        .values-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 40px 0; }
+        .value-card { background: var(--color-bg-alt); padding: 28px; border-radius: var(--radius); }
+        .value-card h3 { color: var(--color-primary); margin-bottom: 12px; }
+        .value-card p { margin: 0; font-size: 15px; }
+        footer { background: var(--color-primary); color: rgba(255,255,255,0.8); padding: 40px; text-align: center; font-size: 14px; }
+        @media (max-width: 768px) { .nav-links { display: none; } .values-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="concept-banner">DESIGN CONCEPT ONLY — This is an unofficial mockup created for demonstration purposes. Not affiliated with Rook Matthews Sayer.</div>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Rook Matthews Sayer</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta">Book Valuation</a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>About Us</h1>
+        <p>The region's leading estate agent, proudly serving the North East for over 30 years.</p>
+    </div>
+
+    <div class="content">
+        <h2>Our Story</h2>
+        <p>Founded in 1992, Rook Matthews Sayer has grown from a single office to become the North East's most trusted estate agency. With 15 branches stretching from Newcastle to Northumberland, we've helped thousands of families find their perfect home.</p>
+        <p>Our success is built on a simple principle: put the customer first. Every member of our team is dedicated to providing exceptional service, honest advice, and expert local knowledge.</p>
+
+        <h2>Why Choose Us?</h2>
+        <p>We consistently sell more homes than any other agent in the region. But it's not just about numbers—it's about the care and attention we give to every client, whether you're a first-time buyer or selling a country estate.</p>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>Local Expertise</h3>
+                <p>Our teams live and work in the communities they serve. We know every street, every school, and every hidden gem.</p>
+            </div>
+            <div class="value-card">
+                <h3>Proven Results</h3>
+                <p>We sell more homes in the region than any other agent. Our marketing reaches more buyers, achieving better prices.</p>
+            </div>
+            <div class="value-card">
+                <h3>Full Service</h3>
+                <p>From valuations to completion, mortgages to surveys—everything you need under one roof.</p>
+            </div>
+            <div class="value-card">
+                <h3>Personal Touch</h3>
+                <p>You'll have a dedicated point of contact throughout. No call centres, no being passed around.</p>
+            </div>
+        </div>
+
+        <h2>Accreditations</h2>
+        <p>We're proud members of ARLA Propertymark, NAEA Propertymark, and the Trading Standards Institute. Our mortgage advisers are fully regulated by the FCA. You can trust that you're in safe hands.</p>
+    </div>
+
+    <footer>
+        <p>© 2026 Rook Matthews Sayer. All rights reserved. | <a href="contact.html" style="color: white;">Contact Us</a></p>
+    </footer>
+</body>
+</html>

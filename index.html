@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Rook Matthews Sayer | The Region's Leading Estate Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #1a365d;
+            --color-primary-light: #2c5282;
+            --color-accent: #c53030;
+            --color-accent-light: #e53e3e;
+            --color-bg: #ffffff;
+            --color-bg-alt: #f7fafc;
+            --color-text: #2d3748;
+            --color-text-muted: #718096;
+            --color-border: #e2e8f0;
+            --font-display: 'DM Serif Display', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, sans-serif;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            line-height: 1.6;
+            background: var(--color-bg);
+        }
+
+        /* Concept Banner */
+        .concept-banner {
+            background: var(--color-accent);
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--color-primary);
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .nav-cta {
+            background: var(--color-accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: var(--color-accent-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            padding: 80px 40px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.03)"/></svg>');
+            background-size: 200px;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.85);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        /* Search Box */
+        .search-box {
+            background: white;
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+        }
+
+        .search-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .search-tab {
+            padding: 8px 20px;
+            border: none;
+            background: var(--color-bg-alt);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .search-tab.active {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .search-fields {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr auto;
+            gap: 12px;
+        }
+
+        .search-field {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .search-field label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .search-field input,
+        .search-field select {
+            padding: 12px 16px;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            font-size: 15px;
+            font-family: inherit;
+        }
+
+        .search-btn {
+            background: var(--color-accent);
+            color: white;
+            border: none;
+            padding: 0 32px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            align-self: flex-end;
+            height: 48px;
+            transition: background 0.2s;
+        }
+
+        .search-btn:hover {
+            background: var(--color-accent-light);
+        }
+
+        @media (max-width: 768px) {
+            .search-fields {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--color-bg-alt);
+            padding: 40px;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--color-primary);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: var(--color-text-muted);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 32px;
+            border: 1px solid var(--color-border);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            box-shadow: var(--shadow);
+            transform: translateY(-4px);
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: var(--color-primary);
+        }
+
+        .service-card p {
+            color: var(--color-text-muted);
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        .service-link {
+            color: var(--color-accent);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Branches Section */
+        .branches {
+            background: var(--color-primary);
+            padding: 80px 40px;
+            color: white;
+        }
+
+        .branches .section-header h2 {
+            color: white;
+        }
+
+        .branches .section-header p {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .branches-list {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .branch-tag {
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .branch-tag:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 40px;
+            text-align: center;
+            background: var(--color-bg-alt);
+        }
+
+        .cta h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            padding: 16px 40px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background 0.2s;
+        }
+
+        .cta-btn:hover {
+            background: var(--color-accent-light);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-primary);
+            color: rgba(255,255,255,0.8);
+            padding: 60px 40px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            color: white;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+        }
+
+        .accreditations {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .accreditations span {
+            background: rgba(255,255,255,0.1);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+            .accreditations {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Concept Banner -->
+    <div class="concept-banner">
+        DESIGN CONCEPT ONLY — This is an unofficial mockup created for demonstration purposes. Not affiliated with Rook Matthews Sayer.
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Rook Matthews Sayer</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta">Book Valuation</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Your Perfect<br>Property in the North East</h1>
+            <p>The region's leading estate agent with 15 branches from Newcastle to Northumberland. Helping you move since 1992.</p>
+
+            <div class="search-box">
+                <div class="search-tabs">
+                    <button class="search-tab active">Buy</button>
+                    <button class="search-tab">Rent</button>
+                </div>
+                <div class="search-fields">
+                    <div class="search-field">
+                        <label>Location</label>
+                        <input type="text" placeholder="Enter town, city or postcode">
+                    </div>
+                    <div class="search-field">
+                        <label>Min Price</label>
+                        <select>
+                            <option>No Min</option>
+                            <option>£100,000</option>
+                            <option>£150,000</option>
+                            <option>£200,000</option>
+                            <option>£250,000</option>
+                            <option>£300,000</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <label>Max Price</label>
+                        <select>
+                            <option>No Max</option>
+                            <option>£200,000</option>
+                            <option>£300,000</option>
+                            <option>£400,000</option>
+                            <option>£500,000</option>
+                            <option>£750,000</option>
+                        </select>
+                    </div>
+                    <button class="search-btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="stats-container">
+            <div class="stat">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Branches Across the Region</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">30+</div>
+                <div class="stat-label">Years of Experience</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">1,200+</div>
+                <div class="stat-label">Properties Listed</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">#1</div>
+                <div class="stat-label">Regional Estate Agent</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="section-header">
+            <h2>How We Can Help</h2>
+            <p>Whether you're buying, selling, or letting, our expert team is here to guide you every step of the way.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>Residential Sales</h3>
+                <p>Looking to sell? We sell more homes than any other agent in the region. Get a free, no-obligation valuation today.</p>
+                <a href="services.html" class="service-link">Learn more →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔑</div>
+                <h3>Lettings & Management</h3>
+                <p>Full property management service for landlords. We handle everything from tenant finding to maintenance.</p>
+                <a href="services.html" class="service-link">Learn more →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Commercial Property</h3>
+                <p>Expert advice on commercial sales and lettings. From retail units to office space, we've got you covered.</p>
+                <a href="services.html" class="service-link">Learn more →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔨</div>
+                <h3>Property Auctions</h3>
+                <p>Quick, transparent sales through our regular auction events. A great option for sellers wanting certainty.</p>
+                <a href="services.html" class="service-link">Learn more →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>Valuations & Surveys</h3>
+                <p>RICS-qualified surveyors providing accurate valuations, HomeBuyer Reports, and building surveys.</p>
+                <a href="services.html" class="service-link">Learn more →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💰</div>
+                <h3>Mortgages & Insurance</h3>
+                <p>In-house mortgage advisers to help you find the best deal. Whole of market access to hundreds of lenders.</p>
+                <a href="services.html" class="service-link">Learn more →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches Section -->
+    <section class="branches">
+        <div class="section-header">
+            <h2>15 Branches Across the North East</h2>
+            <p>From the city centre to the coast, we're never far away.</p>
+        </div>
+
+        <div class="branches-list">
+            <span class="branch-tag">Alnwick</span>
+            <span class="branch-tag">Ashington</span>
+            <span class="branch-tag">Bedlington</span>
+            <span class="branch-tag">Blyth</span>
+            <span class="branch-tag">Fenham</span>
+            <span class="branch-tag">Forest Hall</span>
+            <span class="branch-tag">Gosforth</span>
+            <span class="branch-tag">Hexham</span>
+            <span class="branch-tag">Jesmond</span>
+            <span class="branch-tag">Morpeth</span>
+            <span class="branch-tag">Ponteland</span>
+            <span class="branch-tag">Ryton</span>
+            <span class="branch-tag">West Denton</span>
+            <span class="branch-tag">Whitley Bay</span>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Ready to Move?</h2>
+        <p>Get a free, no-obligation valuation from the region's leading estate agent. We'll visit your property and provide an honest, accurate assessment.</p>
+        <a href="contact.html" class="cta-btn">Book Your Free Valuation</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Rook Matthews Sayer</h3>
+                <p>The region's leading estate agent, proudly serving the North East for over 30 years. From Newcastle to Northumberland, we're here to help you move.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">Sales</a></li>
+                    <li><a href="services.html">Lettings</a></li>
+                    <li><a href="services.html">Commercial</a></li>
+                    <li><a href="services.html">Auctions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:01onal91123456">0191 123 4567</a></li>
+                    <li><a href="mailto:info@rmsestates.co.uk">info@rmsestates.co.uk</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>© 2026 Rook Matthews Sayer. All rights reserved.</div>
+            <div class="accreditations">
+                <span>ARLA</span>
+                <span>NAEA</span>
+                <span>TSI</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
